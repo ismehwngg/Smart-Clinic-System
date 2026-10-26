@@ -1,0 +1,24 @@
+{
+  "name": "smartclinic-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon --ignore db.json src/server.js" 
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "db.json",
+      "**/db.json"
+    ]
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^4.22.3",
+    "jsonwebtoken": "^9.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

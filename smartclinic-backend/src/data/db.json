@@ -1,0 +1,405 @@
+{
+  "users": [
+    {
+      "id": "NV_001",
+      "username": "admin",
+      "password": "123",
+      "fullName": "Admin",
+      "role": "Admin"
+    },
+    {
+      "id": "NV_002",
+      "username": "letan",
+      "password": "123",
+      "fullName": "Nguyễn Thị Lễ Tân",
+      "role": "Receptionist"
+    },
+    {
+      "id": "NV_003",
+      "username": "bacsi1",
+      "password": "123",
+      "fullName": "BS. Trần Quốc Tuấn",
+      "role": "Doctor"
+    },
+    {
+      "id": "NV_004",
+      "username": "bacsi2",
+      "password": "123",
+      "fullName": "Nguyễn Bác Sĩ",
+      "role": "Doctor"
+    },
+    {
+      "id": "NV_005",
+      "username": "test1",
+      "password": "123456",
+      "fullName": "abc",
+      "role": "Receptionist"
+    }
+  ],
+  "patients": [
+    {
+      "id": "BN_001",
+      "fullName": "Nguyễn Văn An",
+      "dob": "1989-06-30",
+      "gender": "Nam",
+      "phone": "0324598421",
+      "address": "Số 12 Chùa Bộc, Đống Đa, Hà Nội",
+      "allergies": "Penicillin",
+      "medicalHistory": "Huyết áp cao, Tiểu đường tuýp 2"
+    },
+    {
+      "id": "BN_002",
+      "fullName": "Lê Thị Bình",
+      "dob": "1985-08-20",
+      "gender": "Nữ",
+      "phone": "0912345678",
+      "address": "Khu đô thị Linh Đàm, Hoàng Mai, Hà Nội",
+      "allergies": "Không có",
+      "medicalHistory": "Viêm loét dạ dày mãn tính, Đã phẫu thuật nội soi năm 2021"
+    },
+    {
+      "id": "BN_003",
+      "fullName": "Trần Minh Châu",
+      "dob": "1998-12-10",
+      "gender": "Nữ",
+      "phone": "0987654321",
+      "address": "Số 45 Nguyễn Trãi, Thanh Xuân, Hà Nội",
+      "allergies": "Hải sản (Tôm, Cua), Đậu phộng",
+      "medicalHistory": "Hen suyễn từ nhỏ"
+    },
+    {
+      "id": "BN_004",
+      "fullName": "Phạm Gia Huy",
+      "dob": "1992-03-25",
+      "gender": "Nam",
+      "phone": "0933445566",
+      "address": "Số 88 Cầu Giấy, Quận Cầu Giấy, Hà Nội",
+      "allergies": "",
+      "medicalHistory": "Khỏe mạnh, không có bệnh nền"
+    },
+    {
+      "id": "BN_005",
+      "fullName": "Hoàng Mai Anh",
+      "dob": "2001-07-19",
+      "gender": "Nữ",
+      "phone": "0977889900",
+      "address": "Số 102 Giải Phóng, Hai Bà Trưng, Hà Nội",
+      "allergies": "Phấn hoa, Bụi mịn",
+      "medicalHistory": "Viêm mũi dị ứng, Rối loạn tiền đình nhẹ"
+    },
+    {
+      "id": "BN_006",
+      "fullName": "Trần Bình Prime",
+      "dob": "2026-10-01",
+      "gender": "Nam",
+      "phone": "012381247982",
+      "address": "123 ha noi",
+      "allergies": "",
+      "medicalHistory": ""
+    },
+    {
+      "id": "BN_007",
+      "fullName": "Trần Bình Prime2",
+      "dob": "2027-01-13",
+      "gender": "Nam",
+      "phone": "1",
+      "address": "Chưa cập nhật"
+    }
+  ],
+  "doctors": [
+    {
+      "id": "BS_001",
+      "fullName": "Nguyễn Thế Minh",
+      "specialty": "Nội tổng quát",
+      "phone": "0901234567",
+      "email": "dr.minh@smartclinic.com",
+      "experience": "Thạc sĩ - 8 năm kinh nghiệm",
+      "bio": "Khám chữa bệnh nội khoa tổng quát, tim mạch và tiểu đường. Trực ca sáng Thứ Hai, Tư, Sáu 67."
+    },
+    {
+      "id": "BS_002",
+      "fullName": "Trần Thị B",
+      "specialty": "Tai - Mũi - Họng",
+      "phone": "0912345678",
+      "email": "dr.b@smartclinic.com",
+      "experience": "Tiến sĩ - 20 năm kinh nghiệm",
+      "bio": "Chuyên nội soi và điều trị các bệnh lý tai mũi họng người lớn và trẻ em."
+    },
+    {
+      "id": "BS_003",
+      "fullName": "GS.TS. Hoàng Văn Nam",
+      "specialty": "Nội tổng quát",
+      "phone": "0918234567",
+      "email": "gs.nam@smartclinic.com",
+      "experience": "Giáo sư - Tiến sĩ - 25 năm kinh nghiệm",
+      "bio": "Chuyên gia đầu ngành về tim mạch, huyết áp và các bệnh lý chuyển hóa. Lịch khám: Thứ Hai và Thứ Năm hằng tuần."
+    },
+    {
+      "id": "BS_004",
+      "fullName": "ThS.BS. Lê Hoàng Long",
+      "specialty": "Ngoại khoa",
+      "phone": "0987654321",
+      "email": "dr.long@smartclinic.com",
+      "experience": "Thạc sĩ - Bác sĩ phẫu thuật chính - 12 năm kinh nghiệm",
+      "bio": "Chuyên phẫu thuật nội soi tiêu hóa, ổ bụng và xử lý các ca chấn thương cấp cứu."
+    },
+    {
+      "id": "BS_005",
+      "fullName": "BSCKII. Nguyễn Thị Mai Anh",
+      "specialty": "Sản phụ khoa",
+      "phone": "0932112233",
+      "email": "dr.maianh@smartclinic.com",
+      "experience": "Bác sĩ CKII - 15 năm kinh nghiệm",
+      "bio": "Khám thai định kỳ, tầm soát dị thai sớm và điều trị các bệnh lý phụ khoa chuyên sâu."
+    },
+    {
+      "id": "BS_006",
+      "fullName": "TS.BS. Phạm Minh Tuấn",
+      "specialty": "Răng - Hàm - Mặt",
+      "phone": "0977889900",
+      "email": "dr.tuan@smartclinic.com",
+      "experience": "Tiến sĩ - Chuyên gia Răng Hàm Mặt - 14 năm kinh nghiệm",
+      "bio": "Chuyên niềng răng thẩm mỹ, cấy ghép Implant và tiểu phẫu răng khôn không đau."
+    },
+    {
+      "id": "BS_007",
+      "fullName": "BS. Vũ Thu Hằng",
+      "specialty": "Nhi khoa",
+      "phone": "0905667788",
+      "email": "dr.hang@smartclinic.com",
+      "experience": "Bác sĩ Nội trú Nhi - 9 năm kinh nghiệm",
+      "bio": "Tận tâm chăm sóc sức khỏe trẻ em, tư vấn dinh dưỡng, tiêm chủng và điều trị các bệnh hô hấp nhi."
+    },
+    {
+      "id": "BS_008",
+      "fullName": "ThS.BS. Đặng Minh Quân",
+      "specialty": "Tai - Mũi - Họng",
+      "phone": "0912998877",
+      "email": "dr.quan@smartclinic.com",
+      "experience": "Thạc sĩ - 10 năm kinh nghiệm",
+      "bio": "Chuyên nội soi tai mũi họng, nạo VA, cắt Amiđan bằng sóng cao tần Plasma không đau."
+    },
+    {
+      "id": "BS_009",
+      "fullName": "BSCKI. Ngô Thanh Vân",
+      "specialty": "Da liễu",
+      "phone": "0963445566",
+      "email": "dr.van@smartclinic.com",
+      "experience": "Bác sĩ CKI Thẩm mỹ da liễu - 7 năm kinh nghiệm",
+      "bio": "Điều trị mụn trứng cá chuyên sâu, sẹo rỗ bằng công nghệ Laser CO2 Fractional và trẻ hóa da."
+    },
+    {
+      "id": "BS_010",
+      "fullName": "PGS.TS. Bùi Quốc Bảo",
+      "specialty": "Nội tổng quát",
+      "phone": "0944112233",
+      "email": "pgs.bao@smartclinic.com",
+      "experience": "Phó Giáo sư - Tiến sĩ - 20 năm kinh nghiệm",
+      "bio": "Nguyên trưởng khoa Nội tổng hợp bệnh viện lớn. Chuyên điều trị các bệnh lý mạn tính người cao tuổi."
+    },
+    {
+      "id": "BS_011",
+      "fullName": "Trần Bình",
+      "specialty": "Nội tổng quát",
+      "phone": "123",
+      "email": "123@gmail.com"
+    }
+  ],
+  "appointments": [
+    {
+      "id": "1",
+      "patientId": "BN_001",
+      "patientName": "Nguyễn Văn An",
+      "patientGender": "Nam",
+      "doctorId": "3",
+      "doctorName": "GS.TS. Hoàng Văn Nam",
+      "date": "2026-10-20",
+      "time": "08:30",
+      "status": "Completed",
+      "reason": "Khám định kỳ, kiểm tra huyết áp và tiểu đường",
+      "notes": "Bệnh nhân đã lấy thuốc.",
+      "prescription": [
+        {
+          "medicineId": "MED_001",
+          "medicineName": "Paracetamol 500mg",
+          "quantity": 20,
+          "dosage": "Sáng 1 viên, tối 1 viên sau ăn"
+        },
+        {
+          "medicineId": "MED_004",
+          "medicineName": "Omeprazol 20mg",
+          "quantity": 10,
+          "dosage": "Sáng 1 viên trước khi ăn 30 phút"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "patientId": "BN_002",
+      "patientName": "Trần Thị Mai",
+      "patientGender": "Nữ",
+      "doctorId": "4",
+      "doctorName": "BS.CKII Phạm Thị Hương",
+      "date": "2026-10-26",
+      "time": "09:00",
+      "status": "Scheduled",
+      "reason": "Đau dạ dày, ợ chua nhiều",
+      "notes": "",
+      "prescription": []
+    },
+    {
+      "id": "3",
+      "patientId": "BN_003",
+      "patientName": "Lê Văn Cường",
+      "patientGender": "Nam",
+      "doctorId": "3",
+      "doctorName": "GS.TS. Hoàng Văn Nam",
+      "date": "2026-10-25",
+      "time": "14:00",
+      "status": "Completed",
+      "reason": "Sốt cao liên tục, ho có đờm",
+      "notes": "Viêm họng cấp, cần theo dõi thêm",
+      "prescription": [
+        {
+          "medicineId": "MED_002",
+          "medicineName": "Amoxicillin 500mg",
+          "quantity": 14,
+          "dosage": "Sáng 1 viên, tối 1 viên sau ăn"
+        },
+        {
+          "medicineId": "MED_001",
+          "medicineName": "Paracetamol 500mg",
+          "quantity": 10,
+          "dosage": "Uống 1 viên khi sốt trên 38.5 độ"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "patientId": "BN_004",
+      "patientName": "Phạm Văn Dũng",
+      "patientGender": "Nam",
+      "doctorId": "5",
+      "doctorName": "ThS.BS Trần Văn Lực",
+      "date": "2026-10-27",
+      "time": "10:30",
+      "status": "Completed",
+      "reason": "Kiểm tra lại vết thương ngoài da",
+      "notes": "Kiểm tra lại vết thương ngoài da",
+      "prescription": [
+        {
+          "medicineId": "MED_005",
+          "medicineName": "Oresol 245",
+          "unit": "Gói",
+          "price": 5000,
+          "quantity": 2,
+          "dosage": "2 sáng"
+        },
+        {
+          "medicineId": "MED_006",
+          "medicineName": "Vitamin C 500mg",
+          "unit": "Viên",
+          "price": 1500,
+          "quantity": 1,
+          "dosage": "1 sáng"
+        }
+      ]
+    },
+    {
+      "id": "LH_261031_001",
+      "patientId": "BN_001",
+      "patientName": "Nguyễn Văn An",
+      "patientGender": "Nam",
+      "doctorId": "BS_001",
+      "doctorName": "Nguyễn Thế Minh",
+      "date": "2026-10-31",
+      "time": "08:30",
+      "status": "Completed",
+      "reason": "",
+      "notes": "",
+      "prescription": [
+        {
+          "medicineId": "MED_004",
+          "medicineName": "Omeprazol 20mg",
+          "unit": "Viên",
+          "price": 4000,
+          "quantity": 1,
+          "dosage": "1 sáng"
+        },
+        {
+          "medicineId": "MED_005",
+          "medicineName": "Oresol 245",
+          "unit": "Gói",
+          "price": 5000,
+          "quantity": 2,
+          "dosage": "1 sáng 1 tối"
+        }
+      ]
+    }
+  ],
+  "medicines": [
+    {
+      "id": "MED_001",
+      "name": "Paracetamol 500mg",
+      "unit": "Viên",
+      "price": 2000,
+      "category": "Giảm đau, hạ sốt"
+    },
+    {
+      "id": "MED_002",
+      "name": "Amoxicillin 500mg",
+      "unit": "Viên",
+      "price": 3500,
+      "category": "Kháng sinh"
+    },
+    {
+      "id": "MED_003",
+      "name": "Loratadin 10mg",
+      "unit": "Viên",
+      "price": 1500,
+      "category": "Kháng histamin (Dị ứng)"
+    },
+    {
+      "id": "MED_004",
+      "name": "Omeprazol 20mg",
+      "unit": "Viên",
+      "price": 4000,
+      "category": "Dạ dày"
+    },
+    {
+      "id": "MED_005",
+      "name": "Oresol",
+      "unit": "Gói",
+      "price": 5000,
+      "category": "Bù nước và điện giải"
+    }
+  ],
+  "invoices": [
+    {
+      "id": "INV_2610_001",
+      "appointmentId": "1",
+      "patientId": "BN_001",
+      "patientName": "Nguyễn Văn An",
+      "consultationFee": 200000,
+      "medicineFee": 80000,
+      "totalAmount": 280000,
+      "status": "Paid",
+      "paymentMethod": "Tiền mặt",
+      "createdAt": "2026-10-20T09:15:00.000Z",
+      "cashierName": "Lễ tân 01"
+    },
+    {
+      "id": "INV_147522",
+      "appointmentId": "4",
+      "patientId": "BN_004",
+      "patientName": "Phạm Văn Dũng",
+      "consultationFee": 200000,
+      "medicineFee": 11500,
+      "totalAmount": 211500,
+      "status": "Paid",
+      "paymentMethod": "Tiền mặt",
+      "cashierName": "Admin",
+      "createdAt": "2026-10-25T11:02:27.522Z"
+    }
+  ]
+}
