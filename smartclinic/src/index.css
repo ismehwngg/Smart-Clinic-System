@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hiệu ứng hiện dần và trượt nhẹ từ dưới lên */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  opacity: 0;
+  animation: fadeInUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Độ trễ nối tiếp nhau (Staggered Animation) cho từng tầng */
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 220ms;
+}
+
+.delay-300 {
+  animation-delay: 340ms;
+}
+
+/* Reset một số margin/padding cơ bản */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f4f6; /* Màu nền xám nhạt cho toàn app */
+  font-family: 'Inter', system-ui, sans-serif;
+}

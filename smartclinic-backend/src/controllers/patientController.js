@@ -47,7 +47,7 @@ export const getPatientById = async (req, res) => {
   try {
     const { id } = req.params;
     const db = await readData();
-    const patient = (db.patients || []).find(p => p.id === id);
+    const patient = (db.patients || []).find(p => String(p.id) === String(id));
 
     if (!patient) {
       return res.status(404).json({ message: 'Không tìm thấy bệnh nhân!' });
@@ -62,7 +62,8 @@ export const getPatientById = async (req, res) => {
 // 3. [POST] /api/patients - Thêm bệnh nhân mới
 export const createPatient = async (req, res) => {
   try {
-    const { fullName, dob, gender, phone, address } = req.body;
+    // Đã bổ sung allergies và medicalHistory
+    const { fullName, dob, gender, phone, address, allergies, medicalHistory } = req.body;
 
     if (!fullName || !dob || !phone) {
       return res.status(400).json({ message: 'Vui lòng điền đầy đủ Họ tên, Ngày sinh và Số điện thoại!' });
@@ -71,7 +72,6 @@ export const createPatient = async (req, res) => {
     const db = await readData();
     if (!db.patients) db.patients = [];
 
-    // Kiểm tra chống trùng số điện thoại
     const isPhoneExist = db.patients.some(p => p.phone === phone);
     if (isPhoneExist) {
       return res.status(400).json({ message: 'Số điện thoại này đã được đăng ký cho một bệnh nhân khác!' });
@@ -83,7 +83,10 @@ export const createPatient = async (req, res) => {
       dob,
       gender: gender || 'Nam',
       phone,
-      address: address || 'Chưa cập nhật'
+      address: address || 'Chưa cập nhật',
+      // Lưu thêm 2 trường tiền sử y tế
+      allergies: allergies || '',
+      medicalHistory: medicalHistory || ''
     };
 
     db.patients.push(newPatient);
@@ -100,7 +103,8 @@ export const createPatient = async (req, res) => {
 export const updatePatient = async (req, res) => {
   try {
     const { id } = req.params;
-    const { fullName, dob, gender, phone, address } = req.body;
+    // Đã bổ sung allergies và medicalHistory
+    const { fullName, dob, gender, phone, address, allergies, medicalHistory } = req.body;
 
     const db = await readData();
     const index = (db.patients || []).findIndex(p => p.id === id);
@@ -109,7 +113,6 @@ export const updatePatient = async (req, res) => {
       return res.status(404).json({ message: 'Không tìm thấy bệnh nhân cần sửa!' });
     }
 
-    // Kiểm tra trùng SĐT với người khác (trừ chính bệnh nhân đang sửa)
     if (phone) {
       const isDuplicatePhone = db.patients.some(p => p.phone === phone && p.id !== id);
       if (isDuplicatePhone) {
@@ -123,7 +126,10 @@ export const updatePatient = async (req, res) => {
       dob: dob || db.patients[index].dob,
       gender: gender || db.patients[index].gender,
       phone: phone || db.patients[index].phone,
-      address: address !== undefined ? address : db.patients[index].address
+      address: address !== undefined ? address : db.patients[index].address,
+      // Cập nhật 2 trường tiền sử y tế
+      allergies: allergies !== undefined ? allergies : db.patients[index].allergies,
+      medicalHistory: medicalHistory !== undefined ? medicalHistory : db.patients[index].medicalHistory
     };
 
     await writeData(db);
@@ -139,7 +145,7 @@ export const deletePatient = async (req, res) => {
   try {
     const { id } = req.params;
     const db = await readData();
-    const index = (db.patients || []).findIndex(p => p.id === id);
+    const index = (db.patients || []).findIndex(p => String(p.id) === String(id));
 
     if (index === -1) {
       return res.status(404).json({ message: 'Không tìm thấy bệnh nhân cần xóa!' });

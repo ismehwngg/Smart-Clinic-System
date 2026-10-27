@@ -118,7 +118,7 @@
     },
     {
       "id": "BS_002",
-      "fullName": "Trần Thị B",
+      "fullName": "Trần Thị Bình",
       "specialty": "Tai - Mũi - Họng",
       "phone": "0912345678",
       "email": "dr.b@smartclinic.com",
@@ -244,7 +244,7 @@
       "time": "09:00",
       "status": "Scheduled",
       "reason": "Đau dạ dày, ợ chua nhiều",
-      "notes": "",
+      "notes": "Đau dạ dày, ợ chua nhiều",
       "prescription": []
     },
     {
@@ -335,6 +335,37 @@
           "dosage": "1 sáng 1 tối"
         }
       ]
+    },
+    {
+      "id": "LH_261030_001",
+      "patientId": "BN_005",
+      "patientName": "Hoàng Mai Anh",
+      "patientGender": "Nữ",
+      "doctorId": "BS_011",
+      "doctorName": "Trần Bình",
+      "date": "2026-10-30",
+      "time": "10:00",
+      "status": "Completed",
+      "reason": "ok ok ok",
+      "notes": "",
+      "prescription": [
+        {
+          "medicineId": "MED_006",
+          "medicineName": "Vitamin C 500mg",
+          "unit": "Viên",
+          "price": 1500,
+          "quantity": 2,
+          "dosage": "1 sáng 1 tối"
+        },
+        {
+          "medicineId": "MED_001",
+          "medicineName": "Paracetamol 500mg",
+          "unit": "Viên",
+          "price": 2000,
+          "quantity": 1,
+          "dosage": "1 sáng"
+        }
+      ]
     }
   ],
   "medicines": [
@@ -400,6 +431,19 @@
       "paymentMethod": "Tiền mặt",
       "cashierName": "Admin",
       "createdAt": "2026-10-25T11:02:27.522Z"
+    },
+    {
+      "id": "INV_245995",
+      "appointmentId": "LH_261030_001",
+      "patientId": "BN_005",
+      "patientName": "Hoàng Mai Anh",
+      "consultationFee": 200000,
+      "medicineFee": 5000,
+      "totalAmount": 205000,
+      "status": "Paid",
+      "paymentMethod": "Tiền mặt",
+      "cashierName": "Admin",
+      "createdAt": "2026-10-26T16:14:05.995Z"
     }
   ]
 }

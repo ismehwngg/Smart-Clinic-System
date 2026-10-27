@@ -45,7 +45,7 @@ export const getDoctorById = async (req, res) => {
 // [POST] /api/doctors - Thêm mới bác sĩ
 export const createDoctor = async (req, res) => {
   const db = await readData();
-  const { fullName, specialty, phone, email } = req.body;
+  const { fullName, specialty, phone, email, notes } = req.body;
 
   if (!fullName || !specialty) {
     return res.status(400).json({ message: 'Vui lòng cung cấp đầy đủ Tên và Chuyên khoa!' });
@@ -60,7 +60,8 @@ export const createDoctor = async (req, res) => {
     fullName,
     specialty,
     phone: phone || '',
-    email: email || ''
+    email: email || '',
+    notes: notes || ''
   };
 
   db.doctors.push(newDoctor);
